@@ -1,0 +1,19 @@
+<div style="max-width: 600px; margin: 40px auto; font-family: sans-serif;">
+  <h2>My tasks</h2>
+
+  <form ng-submit="addTask()" style="margin-bottom: 20px;">
+    <input type="text" ng-model="newTask.title" placeholder="New task title" required style="padding:8px; width:60%;">
+    <select ng-model="newTask.priority" style="padding:8px;">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button type="submit" style="padding:8px 16px;">Add</button>
+  </form>
+
+  <ul style="list-style:none; padding:0;">
+    <li ng-repeat="task in tasks" style="padding:10px; border:1px solid #ccc; margin-bottom:8px;">
+      <strong>{{ task.title }}</strong> — {{ task.status }} — priority: {{ task.priority }}
+    </li>
+  </ul>
+</div>

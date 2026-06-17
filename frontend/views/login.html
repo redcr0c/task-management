@@ -1,0 +1,9 @@
+<div style="max-width: 320px; margin: 60px auto; font-family: sans-serif;">
+  <h2>Login</h2>
+  <form ng-submit="login()">
+    <input type="email" ng-model="credentials.email" placeholder="Email" required style="display:block; width:100%; margin-bottom:10px; padding:8px;">
+    <input type="password" ng-model="credentials.password" placeholder="Password" required style="display:block; width:100%; margin-bottom:10px; padding:8px;">
+    <button type="submit" style="padding:8px 16px;">Login</button>
+  </form>
+  <p style="color:red;">{{ error }}</p>
+</div>
